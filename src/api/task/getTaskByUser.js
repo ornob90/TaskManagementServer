@@ -1,8 +1,10 @@
+const Task = require("../../models/task");
+
 const getTaskByUser = async (req, res, next) => {
   try {
-    const { userId } = req.params;
+    const { email } = req.params;
 
-    const tasks = await Task.find({ user: userId });
+    const tasks = await Task.find({ userEmail: email });
     res.send(tasks);
   } catch (error) {
     next(error);

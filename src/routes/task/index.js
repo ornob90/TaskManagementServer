@@ -1,14 +1,18 @@
 const addTask = require("../../api/task/addTask");
 const deleteTask = require("../../api/task/deleteTask");
 const getTaskByUser = require("../../api/task/getTaskByUser");
+const updateTaskStatus = require("../../api/task/updateTaskStatus");
 
 const router = require("express").Router();
 
 // GET
-router.get("/tasks/:userId", getTaskByUser);
+router.get("/tasks/:email", getTaskByUser);
 
 // POST
 router.post("/tasks", addTask);
+
+// PATCH
+router.patch("/tasks/:id", updateTaskStatus);
 
 // DELETE
 router.delete("/tasks/:id", deleteTask);

@@ -21,9 +21,8 @@ const taskSchema = new mongoose.Schema({
     type: String,
     default: "to-do",
   },
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
+  userEmail: {
+    type: String,
     required: true,
   },
 });
