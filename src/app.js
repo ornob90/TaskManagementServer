@@ -8,6 +8,8 @@ require("dotenv").config();
 const globalErrorHandler = require("./utils/globalErrorHandler");
 
 // routes
+const taskRoutes = require("./routes/task");
+const userRoutes = require("./routes/user");
 
 // utils
 
