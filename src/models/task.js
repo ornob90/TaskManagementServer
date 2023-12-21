@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const taskSchema = new mongoose.Schema({
   title: {
@@ -15,19 +15,19 @@ const taskSchema = new mongoose.Schema({
   },
   priority: {
     type: String,
-    default: 'moderate',
+    default: "moderate",
   },
   status: {
-    type: String
-    default: 'to-do',
+    type: String,
+    default: "to-do",
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
+    ref: "User",
     required: true,
   },
 });
 
-const Task = mongoose.model('Task', taskSchema);
+const Task = mongoose.model("Task", taskSchema);
 
 module.exports = Task;
