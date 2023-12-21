@@ -27,6 +27,8 @@ app.use(
 );
 
 // router middleware
+app.use(taskRoutes);
+app.use(userRoutes);
 
 app.get("/", (req, res) => {
   res.send("Server running...");

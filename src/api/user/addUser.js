@@ -1,9 +1,9 @@
-const User = require("../../models/user");
+const User = require("../../models/User");
 
 const addUser = async (req, res, next) => {
   try {
     const data = req.body;
-
+    console.log(data);
     if (!data) {
       return res
         .status(400)
