@@ -3,14 +3,14 @@ const Task = require("../../models/task");
 
 const updateTaskStatus = async (req, res, next) => {
   try {
-    const { status } = req.body || {};
+    const { status } = req.query || {};
 
     const { id } = req.params;
 
     if (!status) {
       return res
         .status(400)
-        .send({ status: "Bad Request", message: "Invalid status" });
+        .send({ status: status, message: "Invalid status" });
     }
 
     const response = await Task.updateOne(

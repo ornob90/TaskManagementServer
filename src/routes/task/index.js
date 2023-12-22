@@ -12,7 +12,7 @@ router.get("/tasks/:email", getTaskByUser);
 router.post("/tasks", addTask);
 
 // PATCH
-router.patch("/tasks/:id", updateTaskStatus);
+router.put("/tasks/:id", updateTaskStatus);
 
 // DELETE
 router.delete("/tasks/:id", deleteTask);
